@@ -1,5 +1,6 @@
 import { graphql, useStaticQuery } from "gatsby"
-import React, { useEffect } from "react"
+import React from "react"
+import './Products.css'
 
 const GET_ALL_PRICES = graphql`
   query MyQuery {
@@ -27,19 +28,24 @@ const Products = ({ buy }) => {
       <table>
         <thead>
           <tr>
-            <td>Product Name</td>
-            <td>Price</td>
-            <td>Image</td>
-            <td>BUY</td>
+            <th>Product Name</th>
+            <th>Price</th>
+            <th>Image</th>
+            <th>BUY</th>
           </tr>
         </thead>
         <tbody>
           {data.prices.edges.map(({ node }) => (
             <tr key={node.id}>
               <td>{node.product.name}</td>
-              <td>{node.unit_amount}</td>
+              <td>{node.unit_amount/100}</td>
               <td>
-                <img width="200px" src={node.product.images[0]} alt="" srcset="" />
+                <img
+                  width="200px"
+                  src={node.product.images[0]}
+                  alt=""
+                  srcset=""
+                />
               </td>
               <td>
                 <button onClick={() => buy(node.id)}>BUY</button>

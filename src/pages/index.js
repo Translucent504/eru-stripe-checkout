@@ -1,6 +1,7 @@
 import React, { useRef } from "react"
 
 import { useEffect } from "react"
+import Navbar from "../components/Navbar"
 import Products from "../components/Products/Products"
 import getStripe from "../utils/stripe"
 
@@ -26,6 +27,7 @@ const IndexPage = () => {
 
   return (
     <>
+      <Navbar />
       <Products buy={buyItem} />
     </>
   )

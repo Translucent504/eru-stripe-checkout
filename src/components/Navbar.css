@@ -1,0 +1,10 @@
+nav {
+    display: flex;
+    flex-direction: row;
+    font-size: 1.4rem;
+    background: linen;
+    color: white;
+    justify-content: space-evenly;
+    margin-bottom: 50px;
+    flex-wrap: wrap;
+}

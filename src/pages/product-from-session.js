@@ -1,4 +1,5 @@
 import React, { useEffect, useRef } from "react"
+import Navbar from "../components/Navbar"
 import getStripe from "../utils/stripe"
 
 const ProductFromSession = () => {
@@ -27,6 +28,7 @@ const ProductFromSession = () => {
   }
   return (
       <>
+      <Navbar />
       <h1>Try Checkout from serverless stripe backend:</h1>
       <button onClick={handleClick}>CHECKOUT</button>
       </>

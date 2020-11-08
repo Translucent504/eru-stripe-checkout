@@ -17,8 +17,8 @@ const IndexPage = () => {
     const { error } = await stripeRef.current.redirectToCheckout({
       mode: "payment",
       lineItems: [{ price: id, quantity: 1 }],
-      successUrl: "http://localhost:8888/",
-      cancelUrl: "http://localhost:8888/",
+      successUrl: "https://eru-stripe-checkout.netlify.app/",
+      cancelUrl: "https://eru-stripe-checkout.netlify.app/",
     })
     if (error) {
       console.log(error)
